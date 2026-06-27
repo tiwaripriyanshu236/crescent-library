@@ -1,3 +1,7 @@
+
+
+
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -54,8 +58,10 @@ export function BookingDialog({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg rounded-3xl border border-border bg-card p-6 shadow-elegant md:p-8 animate-[scale-in_0.25s_ease-out]"
-        onClick={(e) => e.stopPropagation()}
+       
+  className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-3xl border border-border bg-card p-6 shadow-elegant md:p-8 animate-[scale-in_0.25s_ease-out]"
+  onClick={(e) => e.stopPropagation()}
+
       >
         <button
           type="button"
@@ -73,7 +79,7 @@ export function BookingDialog({
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3" noValidate>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3  pb-4" noValidate>
           <div className="grid grid-cols-3 gap-2">
             {(["daily", "weekly", "monthly"] as Plan[]).map((p) => (
               <label key={p} className="cursor-pointer">
