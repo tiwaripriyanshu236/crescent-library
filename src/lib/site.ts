@@ -12,8 +12,8 @@ export const SITE = {
     country: "India",
   },
   contact: {
-    phone: "+91 00000-00000",
-    email: "hello@crescentlibrary.in",
+    phone: "+91 94254-52755",
+    email: "Kandya79@gmail.com",
     hours: "6:00 AM – 11:00 PM · All days",
   },
   mapEmbed:
