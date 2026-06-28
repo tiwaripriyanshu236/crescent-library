@@ -19,9 +19,9 @@ export const SITE = {
   mapEmbed:
      "https://www.google.com/maps?q=RPQH%2BX9V,+Moti+Nagar,+Sagar,+Madhya+Pradesh+470002&output=embed",
   social: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    whatsapp: "https://wa.me/910000000000",
+    instagram: "",
+    facebook: "",
+    whatsapp: "",
   },
 };
 
