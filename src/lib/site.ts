@@ -17,7 +17,7 @@ export const SITE = {
     hours: "6:00 AM – 11:00 PM · All days",
   },
   mapEmbed:
-    "https://www.google.com/maps?q=Moti+Nagar,+Sagar,+Madhya+Pradesh+470002&output=embed",
+     "https://www.google.com/maps?q=RPQH%2BX9V,+Moti+Nagar,+Sagar,+Madhya+Pradesh+470002&output=embed",
   social: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
