@@ -20,7 +20,7 @@ type FormValues = {
   notes: string;
 };
 
-const PRICE: Record<Plan, number> = { daily: 50, weekly: 350, monthly: 1500 };
+const PRICE: Record<Plan, number> = { daily: 100, weekly: 500, monthly: 1500 };
 
 export function BookingDialog({
   open, onClose, initialPlan,

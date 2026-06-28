@@ -55,8 +55,8 @@ export const submitContact = createServerFn({ method: "POST" })
   });
 
 const PRICE: Record<string, number> = {
-  daily: 50,
-  weekly: 350,
+  daily: 100,
+  weekly: 500,
   monthly: 1500,
 };
 

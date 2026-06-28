@@ -206,9 +206,9 @@ CREATE POLICY "settings_admin_all" ON public.website_settings FOR ALL TO authent
 
 -- Seed pricing plans
 INSERT INTO public.pricing_plans (slug, name, price_inr, duration_label, features, is_highlighted, sort_order) VALUES
-  ('daily', 'Daily Pass', 50, 'per day', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility"]'::jsonb, false, 1),
-  ('weekly', 'Weekly Pass', 350, 'per week', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility","Reserved Desk"]'::jsonb, false, 2),
-  ('monthly', 'Monthly Pass', 800, 'per month', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility","Reserved Desk","Locker Access","Priority Support"]'::jsonb, true, 3);
+  ('daily', 'Daily Pass', 100, 'per day', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility"]'::jsonb, false, 1),
+  ('weekly', 'Weekly Pass', 500, 'per week', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility","Reserved Desk"]'::jsonb, false, 2),
+  ('monthly', 'Monthly Pass', 1500, 'per month', '["Unlimited WiFi","Silent Zone","Comfortable Seating","Charging Point","Water Facility","Reserved Desk","Locker Access","Priority Support"]'::jsonb, true, 3);
 
 -- Seed reviews
 INSERT INTO public.reviews (student_name, college, rating, review_text, is_approved, sort_order) VALUES

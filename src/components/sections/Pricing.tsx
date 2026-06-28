@@ -14,7 +14,7 @@ const PLANS: Plan[] = [
   {
     slug: "daily",
     name: "Daily Pass",
-    price: 50,
+    price: 100,
     unit: "/day",
     features: ["Unlimited WiFi", "Silent Zone", "Comfortable Seating", "Charging Point", "Water Facility"],
   },
@@ -35,7 +35,7 @@ const PLANS: Plan[] = [
   {
     slug: "weekly",
     name: "Weekly Pass",
-    price: 350,
+    price: 500,
     unit: "/week",
     features: ["Unlimited WiFi", "Silent Zone", "Reserved Desk", "Charging Point", "Water Facility"],
   },
