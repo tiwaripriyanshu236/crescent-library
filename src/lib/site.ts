@@ -12,7 +12,7 @@ export const SITE = {
     country: "India",
   },
   contact: {
-    phone: "+91 00000 00000",
+    phone: "+91 00000-00000",
     email: "hello@crescentlibrary.in",
     hours: "6:00 AM – 11:00 PM · All days",
   },
