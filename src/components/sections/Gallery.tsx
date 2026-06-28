@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { Reveal } from "@/components/site/Reveal";
 import g1 from "@/assets/gallery-1.jpg";
@@ -12,7 +14,7 @@ const IMAGES = [
   { src: g1, cat: "Study Hall", h: "row-span-2" },
   { src: g2, cat: "Cabins", h: "" },
   { src: g3, cat: "Reception", h: "" },
-  { src: g4, cat: "Night Study", h: "row-span-2" },
+  { src: g4, cat: "Relax Area", h: "row-span-2" },
   { src: g5, cat: "Library View", h: "" },
   { src: g6, cat: "Facilities", h: "" },
 ];
