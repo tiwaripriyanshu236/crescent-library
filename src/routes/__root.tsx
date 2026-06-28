@@ -1,3 +1,6 @@
+
+
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -76,10 +79,15 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#2563EB" },
-    ],
+  { charSet: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+  { name: "theme-color", content: "#2563EB" },
+
+  {
+    name: "google-site-verification",
+    content: "PQPC0CiBgSAUIxp2EJqAxGsLWoBGrTo9gdEtlhIzmss",
+  },
+],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
