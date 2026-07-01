@@ -1,3 +1,4 @@
+
 import { Check, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 
@@ -6,18 +7,30 @@ type Plan = {
   name: string;
   price: number;
   unit: string;
+  description?: string;
   features: string[];
   highlight?: boolean;
 };
-
-const PLANS: Plan[] = [
+ const PLANS: Plan[] = [
   {
     slug: "daily",
-    name: "Daily Pass",
+    name: "Hourly Pass",
     price: 100,
-    unit: "/day",
-    features: ["Unlimited WiFi", "Silent Zone", "Comfortable Seating", "Charging Point", "Water Facility"],
+    unit: "/hour",
+    description:
+      "Flexible plan. Pay ₹100 for each study hour. Example: 3 hours = ₹300. Charges are based only on the total hours you use.",
+    features: [
+      "₹100 per study hour",
+      "Example: 3 Hours = ₹300",
+      "Choose any number of hours",
+      "Unlimited WiFi",
+      "Silent Study Zone",
+      "Comfortable Seating",
+      "Charging Point",
+      "Clean Drinking Water",
+    ],
   },
+
   {
     slug: "monthly",
     name: "Monthly Pass",
@@ -37,11 +50,21 @@ const PLANS: Plan[] = [
     name: "Weekly Pass",
     price: 500,
     unit: "/week",
-    features: ["Unlimited WiFi", "Silent Zone", "Reserved Desk", "Charging Point", "Water Facility"],
+    features: [
+      "Unlimited WiFi",
+      "Silent Zone",
+      "Reserved Desk",
+      "Charging Point",
+      "Water Facility",
+    ],
   },
 ];
 
-export function Pricing({ onPlanSelect }: { onPlanSelect: (slug: Plan["slug"]) => void }) {
+export function Pricing({
+  onPlanSelect,
+}: {
+  onPlanSelect: (slug: Plan["slug"]) => void;
+}) {
   return (
     <section id="pricing" className="section-y">
       <div className="container-x">
@@ -49,6 +72,7 @@ export function Pricing({ onPlanSelect }: { onPlanSelect: (slug: Plan["slug"]) =
           <h2 className="font-display text-3xl font-bold md:text-5xl">
             Simple, honest <span className="text-gradient">pricing</span>
           </h2>
+
           <p className="mt-4 text-muted-foreground md:text-lg">
             Pay-as-you-go or commit and save. No hidden fees, ever.
           </p>
@@ -67,18 +91,34 @@ export function Pricing({ onPlanSelect }: { onPlanSelect: (slug: Plan["slug"]) =
                 {p.highlight && (
                   <>
                     <div className="absolute -inset-px -z-10 rounded-3xl gradient-primary opacity-30 blur-xl" />
+
                     <span className="absolute -top-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-1 rounded-full gradient-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-glow">
-                      <Sparkles className="h-3 w-3" /> Most Popular
+                      <Sparkles className="h-3 w-3" />
+                      Most Popular
                     </span>
                   </>
                 )}
-                <div className="font-display text-lg font-semibold">{p.name}</div>
+
+                <div className="font-display text-lg font-semibold">
+                  {p.name}
+                </div>
+
                 <div className="mt-2 flex items-baseline gap-1">
                   <span className="font-display text-5xl font-bold tracking-tight">
                     ₹{p.price}
                   </span>
-                  <span className="text-sm text-muted-foreground">{p.unit}</span>
+
+                  <span className="text-sm text-muted-foreground">
+                    {p.unit}
+                  </span>
                 </div>
+
+                {/* Description */}
+                {p.description && (
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    {p.description}
+                  </p>
+                )}
 
                 <ul className="mt-6 flex-1 space-y-3 text-sm">
                   {p.features.map((f) => (
@@ -86,6 +126,7 @@ export function Pricing({ onPlanSelect }: { onPlanSelect: (slug: Plan["slug"]) =
                       <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full gradient-primary text-primary-foreground">
                         <Check className="h-3 w-3" />
                       </span>
+
                       <span className="text-foreground/80">{f}</span>
                     </li>
                   ))}
